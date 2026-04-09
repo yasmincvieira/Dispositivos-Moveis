@@ -5,4 +5,131 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/etAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etPeso"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etPeso"
+        app:layout_constraintTop_toBottomOf="@+id/etPeso"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:text="Informe os valores abaixo:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular IMC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAltura"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <TextView
+        android:id="@+id/tvR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:text="Resultado:"
+        android:textFontWeight="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCalcular"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvR"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <TextView
+        android:id="@+id/tvClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/tvResultado"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvResultado"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultado"
+        app:layout_constraintVertical_bias="0.233" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peso:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.127" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Altura:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.121" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="288dp"
+        android:layout_height="270dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultado"
+        app:layout_constraintVertical_bias="0.971"
+        app:srcCompat="@drawable/perfil" />
+</androidx.constraintlayout.widget.ConstraintLayout>
