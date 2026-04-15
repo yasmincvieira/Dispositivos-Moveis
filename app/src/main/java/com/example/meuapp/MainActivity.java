@@ -47,7 +47,25 @@ public class MainActivity extends AppCompatActivity {
 
             tvResultado.setText(dc.format(imc));
 
-
+            if (imc < 18.5){
+                tvClass.setText("Abaixo do peso");
+                imageView.setImageResource(R.drawable.abaixopeso);
+            }else if (imc >= 18.5 && imc <= 24.99){
+                tvClass.setText("Peso normal");
+                imageView.setImageResource(R.drawable.normal);
+            }else if (imc >= 25 && imc <= 29.99) {
+                tvClass.setText("Sobrepeso");
+                imageView.setImageResource(R.drawable.sobrepeso);
+            }else if (imc >= 30 && imc <= 34.99) {
+                tvClass.setText("Obesidade grau 1");
+                imageView.setImageResource(R.drawable.obesidade1);
+            }else if (imc >= 35 && imc <= 39.99) {
+                tvClass.setText("Obesidade grau 2");
+                imageView.setImageResource(R.drawable.obesidade2);
+            }else {
+                tvClass.setText("Obesidade grau 3");
+                imageView.setImageResource(R.drawable.obesidade3);
+            }
 
 
         });
