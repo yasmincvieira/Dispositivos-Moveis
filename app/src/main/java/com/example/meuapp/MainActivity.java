@@ -1,5 +1,6 @@
 package com.example.meuapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvResultado, tvClass;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         btCaucular=findViewById(R.id.btCalcular);
         etPeso=findViewById(R.id.etPeso);
         etAltura=findViewById(R.id.etAltura);
-        tvResultado=findViewById(R.id.tvResultado);
-        tvClass=findViewById(R.id.tvClass);
+
+
 
 
         btCaucular.setOnClickListener(v -> {
@@ -45,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
             Double imc = peso/(altura*altura);
             DecimalFormat dc = new DecimalFormat("##.##");
 
+
             tvResultado.setText(dc.format(imc));
+
 
             if (imc < 18.5){
                 tvClass.setText("Abaixo do peso");

@@ -59,47 +59,6 @@
         app:layout_constraintVertical_bias="0.057" />
 
     <TextView
-        android:id="@+id/tvR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
-        android:text="Resultado:"
-        android:textFontWeight="10"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btCalcular"
-        app:layout_constraintVertical_bias="0.05" />
-
-    <TextView
-        android:id="@+id/tvResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvR"
-        app:layout_constraintVertical_bias="0.042" />
-
-    <TextView
-        android:id="@+id/tvClass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/tvResultado"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvResultado"
-        app:layout_constraintTop_toBottomOf="@+id/tvResultado"
-        app:layout_constraintVertical_bias="0.233" />
-
-    <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -131,7 +90,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvResultado"
-        app:layout_constraintVertical_bias="0.628"
+        app:layout_constraintTop_toBottomOf="@+id/btCalcular"
         app:srcCompat="@drawable/perfil" />
 </androidx.constraintlayout.widget.ConstraintLayout>
