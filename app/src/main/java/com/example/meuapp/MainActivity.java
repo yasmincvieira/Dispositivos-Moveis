@@ -1,5 +1,6 @@
 package com.example.meuapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -32,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener((parent, view, position, id) -> {
-
+            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+            i.putExtra("nome", nomes[position]);//["nome", valor
+            startActivity(i);
         });
-
-
     }
 }

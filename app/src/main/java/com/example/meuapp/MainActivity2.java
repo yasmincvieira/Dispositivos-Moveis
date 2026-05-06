@@ -1,6 +1,7 @@
 package com.example.meuapp;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,9 @@ public class MainActivity2 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
 
+        String nome = getIntent().getExtras().getString("nome");
+        TextView tv = findViewById(R.id.tvNome2);
+        tv.setText(nome);
 
 
     }
