@@ -25,17 +25,19 @@ public class AdapterPlaneta extends ArrayAdapter<Planeta> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         //Inflar layout
-        LayoutInflater layoutInflater = LayoutInflater.from(lcontext);
-        View view = layoutInflater.inflate(R.layout.item,parent, false);
+        LayoutInflater inflater = LayoutInflater.from(lcontext);
+        View itemView=inflater.inflate(R.layout.item,parent,false);
 
-        //Preencher o item da listagem na variavel view
-        TextView tvNome = view.findViewById(R.id.textView);
-        ImageView imageView = view.findViewById(R.id.imageView);
+        //preencher item da listagem na variavel view
+        TextView tvNome = itemView.findViewById(R.id.textView);
+        ImageView imageView= itemView.findViewById(R.id.imageView);
         Planeta p = getItem(position);
-        tvNome.setText(p.nome);
+        TextView tvmassa=itemView.findViewById(R.id.tvMassa);
+
         imageView.setImageResource(p.foto);
+        tvmassa.setText(p.massa);
 
-
-        return view;
+        tvNome.setText(p.nome);
+        return itemView;
     }
 }
